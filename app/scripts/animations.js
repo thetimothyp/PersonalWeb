@@ -5,6 +5,7 @@ $(function(){
     	startDelay: 500,
     	callback: function() {
     		$(".typed-cursor").css('display','none');
+    		$(".divider").css('width','40%');
     		setTimeout(invokeFade,400);
     	}
 	});
@@ -33,7 +34,7 @@ function fadeIn(i, elements, duration, callback){
         $.isFunction(callback) && callback();
     else
         elements.eq(i).animate({color: 'rgba(0,0,0,1)'},duration, function(){
-        	$('hr').eq(i).removeClass('disabled');
+        	$('li hr').eq(i).removeClass('disabled');
         	fadeIn(i+1, elements, duration, callback);
         }).css("display","inline");        
 }
