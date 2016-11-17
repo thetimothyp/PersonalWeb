@@ -13,11 +13,20 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
   font-family: 'Open Sans';
   font-weight: 300;
-  color: #333;
+  color: #777;
+  background: #fff;
+}
+
+.highlight {
+  color: #000;
+  font-weight: 400;
+}
+
+.container {
+  height: 100vh;
+  position: relative;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -28,14 +37,60 @@ body {
   padding-right: 15px;
 }
 
+.custom-nav {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: 2%;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+
+  li {
+    display: inline-block;
+    padding: 4px 0;
+    margin: 0 4.5%;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    transition: border-bottom 0.5s;
+
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+
+    &.disabled:hover {
+      border-bottom: 2px solid rgba(0,0,0,0);
+    }
+
+    a {
+      letter-spacing: 1px;
+      font-weight: 400;
+      color: rgba(0,0,0,0);
+      // display: none;
+
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .first {
+    margin-right: 4.5%;
+    margin-left: 0;
+  }
+
+  .last {
+    margin-right: 0;
+    margin-left: 4.5%;
+  }
+
+}
+
 .hero {
   position: absolute;
-  top: 42.5%;
-  left: 40%;
+  width: 100%;
+  top: 50%;
+  left: 15%;
   margin-top: -50px;
-  margin-left: -50px;
-  width: 20%;
-  height: 15%;
 }
 
 #typed-strings {
@@ -73,7 +128,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 760px;
   }
 
   /* Remove the padding we set earlier */

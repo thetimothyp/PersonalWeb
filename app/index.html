@@ -22,20 +22,33 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
+    <!-- <header>
+      <div class='nav'>
+        <p>tim<span class='highlight'>park</span></p>
+      </div>
+    </header> -->
+
     <div class="container">
       <div class="hero">
         <div id="typed-strings">
-          <p>hi, i'm <strong>tim</strong>^1500,<br>a <strong>web developer</strong> from <br>saratoga, california.</p>
+          <p>hi, i'm <span class='highlight'>tim</span>^1500, a <span class='highlight'>developer</span> in <span class='highlight'>irvine, ca.</span>^1000</p>
+          <p></p>
         </div>
         <div class="typed"></div>
       </div>
+      <ul class='custom-nav'>
+          <li class='first disabled'><a href='#'>ABOUT</a><div class='border'></div></li>
+          <li class='disabled'><a href='#'>EXPERIENCE</a></li>
+          <li class='disabled'><a href='#'>SKILLSET</a></li>
+          <li class='last disabled'><a href='#'>CONTACT</a></li>
+        </ul>
     </div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -71,6 +84,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/jquery.color-2.1.2.min.js"></script>
     <script src="scripts/typed.js"></script>
     <script src="scripts/animations.js"></script>
     <!-- endbuild -->
