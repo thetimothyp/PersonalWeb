@@ -6,7 +6,7 @@ $(function(){
     	callback: function() {
     		$(".typed-cursor").css('display','none');
     		$(".divider").css('width','40%');
-    		setTimeout(invokeFade,400);
+    		setTimeout(invokeFade,1600);
     	}
 	});
 
@@ -18,15 +18,32 @@ $(function(){
 	})
 
 	$("li").mouseleave(function(e) {
-		$(this).children("hr").css({
-			'width':'0%',
-			'float':'right'
+		if (!$(this).children("hr").hasClass("active")) {
+			$(this).children("hr").css({
+				'width':'0%',
+				'float':'right'
+			});
+		}
+	})
+
+	$("li").on('click', function(e) {
+		$('li').each(function(i) {
+			$(this).children("hr").removeClass('active');
 		});
+		$(this).children("hr").addClass('active');
+		$('.nav-item hr').each(function(i) {
+			if (!$(this).hasClass('active')) {
+				$(this).css({
+					'width':'0',
+					'float':'right'
+				});
+			}
+		})
 	})
 });
 
 function invokeFade() {
-	fadeIn(0, $('a'), 400);
+	fadeIn(0, $('a'), 600);
 }
 
 function fadeIn(i, elements, duration, callback){

@@ -55,8 +55,9 @@ body {
       letter-spacing: 1px;
       font-weight: 400;
       color: rgba(0,0,0,0);
+      text-decoration: none;
 
-      &:hover, &:active {
+      &:hover, &:active, &:visited {
         text-decoration: none;
       }
     }
@@ -67,6 +68,10 @@ body {
     width: 0;
     margin: 5px 0;
     transition: width 0.7s;
+
+    &.active {
+      width: 100%;
+    }
 
     &.disabled {
       border-top: 2px solid rgba(0,0,0,0);
