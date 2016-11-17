@@ -8,6 +8,20 @@ $(function(){
     		setTimeout(invokeFade,400);
     	}
 	});
+
+	$("li").mouseenter(function(e) {
+		$(this).children("hr").css({
+			'width':'100%',
+			'float':'left'
+		});
+	})
+
+	$("li").mouseleave(function(e) {
+		$(this).children("hr").css({
+			'width':'0%',
+			'float':'right'
+		});
+	})
 });
 
 function invokeFade() {
@@ -19,7 +33,7 @@ function fadeIn(i, elements, duration, callback){
         $.isFunction(callback) && callback();
     else
         elements.eq(i).animate({color: 'rgba(0,0,0,1)'},duration, function(){
-        	elements.eq(i).parent().removeClass('disabled');
+        	$('hr').eq(i).removeClass('disabled');
         	fadeIn(i+1, elements, duration, callback);
         }).css("display","inline");        
 }
