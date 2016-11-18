@@ -89,7 +89,7 @@ var info = {
 		<p>Super Toy Box is a development studio based in Lake Forest, CA. As a developer, I'll do \
 		anything from building out a web app front end with <strong>HTML, CSS,</strong> and <strong>JavaScript</strong> \
 		to creating immersive VR experiences in <strong>Unity</strong>. Other responsibilities include \
-		automating internal build processes with <strong>bash</strong> and <strong>node</strong> scripting, \
+		automating internal build processes with <strong>bash</strong> and <strong>Node.js</strong> scripting, \
 		coding up enterprise iOS applications, and taking out the trash.</p> \
 		\
 		<h5>iBASEt</h5> \
@@ -98,7 +98,24 @@ var info = {
 		responsible for the design needs of multiple departments. My duties would range from designing \
 		small digital pieces like marketing materials for email and HubSpot campaigns, to leading the \
 		branding design and execution for massive conferences like the company's annual user conference. \
-		Tools used include <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong></p>",
+		Tools used include <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong>.</p> \
+		\
+		<h5 id='personal'>Personal Projects</h5> \
+		<h6 class='personal'>Writeboard</h6> \
+		<p>A simple real time chatting and drawing web application. Users can draw on a communal \
+		whiteboard and chat in real time within their current channel. Written in <strong>HTML, CSS, \
+		</strong>and <strong>JavaScript</strong> on the front end. Powered by <strong>Node.js</strong> \
+		and <strong>MongoDB</strong> in the back end.</p> \
+		\
+		<h6 class='personal'>BattleGuides</h6> \
+		<p>A guide-crafting web application for the online battle arena game BattleRite. Users are given \
+		a chapter-by-chapter template to fill in to create player guides for specific champions. Again, \
+		Written in <strong>HTML, CSS,</strong> and <strong>JavaScript</strong> on the front end, and powered \
+		by <strong>Node.js</strong> and <strong>MongoDB</strong> in the back end.</p> \
+		\
+		<h6 class='personal'>Dot</h6> \
+		<p>An experiment in movement, fluidity, and 2D physics. User controls a dot with a tail. Not much to \
+		it. (Written in vanilla <strong>JavaScript</strong>, rendered with <strong>HTML5</strong> canvas.)</p>",
 
 	contact : "<p>contact me.</p>"
 }
