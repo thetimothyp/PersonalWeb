@@ -151,11 +151,19 @@ body {
   right: 0;
   top: 55%;
 
+  img {
+    display: inline-block;
+    height: 11px;
+    margin-bottom: 0.2em;
+    margin-left: 5px;
+  }
+
   h5 {
     margin: 5px 0;
     margin-top: 30px;
     color: #222; 
     font-weight: 700;
+    display: inline-block;
 
     &.first-header {
       margin-top: 0;
@@ -174,6 +182,7 @@ body {
     &.personal {
       margin-top: 20px;
       margin-bottom: 5px;
+      display: inline-block;
     }
   }
 

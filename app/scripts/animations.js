@@ -51,6 +51,13 @@ $(function(){
 	$("#experience").on('click', function(e) {
 		$('.info').fadeOut(300, function() {
 			$('.info').html(info.experience);
+			$('img').mouseenter(function(e) {
+				$(this).attr('src', 'images/link_hover.svg');
+			})
+
+			$('img').mouseleave(function(e) {
+				$(this).attr('src', 'images/link.svg');
+			})
 		}).fadeIn(300);
 	})
 
@@ -85,6 +92,7 @@ var info = {
 
 	experience : 
 		"<h5 class='first-header'>Super Toy Box</h5> \
+		<a target='_blank' href='http://supertoybox.co/'><img src='images/link.svg'></a> \
 		<h6>Developer</h6> \
 		<p>Super Toy Box is a development studio based in Lake Forest, CA. As a developer, I'll do \
 		anything from building out a web app front end with <strong>HTML, CSS,</strong> and <strong>JavaScript</strong> \
@@ -93,6 +101,7 @@ var info = {
 		coding up enterprise iOS applications, and taking out the trash.</p> \
 		\
 		<h5>iBASEt</h5> \
+		<a target='_blank' href='http://www.ibaset.com/'><img src='images/link.svg'></a> \
 		<h6>Graphic Designer</h6> \
 		<p>As the sole graphic designer at iBASEt's headquarters in Foothill Ranch, CA, I was \
 		responsible for the design needs of multiple departments. My duties would range from designing \
@@ -100,20 +109,22 @@ var info = {
 		branding design and execution for massive conferences like the company's annual user conference. \
 		Tools used include <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong>.</p> \
 		\
-		<h5 id='personal'>Personal Projects</h5> \
+		<h5 id='personal'>Personal Projects</h5><br> \
 		<h6 class='personal'>Writeboard</h6> \
+		<a target='_blank' href='http://writeboard-app.herokuapp.com/'><img src='images/link.svg'></a> \
 		<p>A simple real time chatting and drawing web application. Users can draw on a communal \
 		whiteboard and chat in real time within their current channel. Written in <strong>HTML, CSS, \
 		</strong>and <strong>JavaScript</strong> on the front end. Powered by <strong>Node.js</strong> \
 		and <strong>MongoDB</strong> in the back end.</p> \
 		\
 		<h6 class='personal'>BattleGuides</h6> \
+		<a target='_blank' href='http://battleguides.herokuapp.com/'><img src='images/link.svg'></a> \
 		<p>A guide-crafting web application for the online battle arena game BattleRite. Users are given \
 		a chapter-by-chapter template to fill in to create player guides for specific champions. Again, \
 		Written in <strong>HTML, CSS,</strong> and <strong>JavaScript</strong> on the front end, and powered \
 		by <strong>Node.js</strong> and <strong>MongoDB</strong> in the back end.</p> \
 		\
-		<h6 class='personal'>Dot</h6> \
+		<h6 class='personal'>Dot</h6><img src='images/link.svg'> \
 		<p>An experiment in movement, fluidity, and 2D physics. User controls a dot with a tail. Not much to \
 		it. (Written in vanilla <strong>JavaScript</strong>, rendered with <strong>HTML5</strong> canvas.)</p>",
 
