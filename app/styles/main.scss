@@ -27,6 +27,7 @@ body {
 .container {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -41,10 +42,12 @@ body {
   text-align: center;
   padding: 10px;
   width: 100%;
-  margin-top: 2%;
   position: absolute;
   top: 50%;
+  margin: 0 auto;
   margin-top: -50px;
+  left: 0;
+  right: 0;
 
   li {
     display: inline-block;
@@ -102,7 +105,7 @@ body {
   position: absolute;
   width: 100%;
   top: 40%;
-  left: 18%;
+  left: 16%;
   margin-top: -50px;
 }
 
@@ -136,6 +139,45 @@ body {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.info {
+  position: absolute;
+  background: rgba(50,50,50,0);
+  width: 70%;
+  padding: 15px 21px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 55%;
+
+  h5 {
+    margin: 5px 0;
+    margin-top: 30px;
+    color: #222; 
+    font-weight: 700;
+
+    &.first-header {
+      margin-top: 0;
+    }
+  }
+
+  h6 {
+    margin: 5px 0;
+    margin-bottom: 10px;
+    color: #222;
+  }
+
+  p {
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    color: #555;
+
+    strong {
+      font-weight: 400;
+      color: blue;
+    }
+  }
 }
 
 /* Responsive: Portrait tablets and up */
