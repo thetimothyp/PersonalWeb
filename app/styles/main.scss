@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 101vh;
   position: relative;
   overflow: hidden;
 }
@@ -52,10 +52,11 @@ body {
   li {
     display: inline-block;
     padding: 4px 0;
-    margin: 0 4.5%;
+    margin: 0 2.6vw;
 
     a {
-      letter-spacing: 1px;
+      font-size: 1.1vw;
+      letter-spacing: 0.09vw;
       font-weight: 400;
       color: rgba(0,0,0,0);
       text-decoration: none;
@@ -82,7 +83,7 @@ body {
 
     &.divider {
       transition: width 1.5s;
-      margin: 30px auto;
+      margin: 5vh auto;
       margin-top: 0;
       width: 0;
       border-top: 1.5px solid #dfdfdf;
@@ -105,7 +106,11 @@ body {
   position: absolute;
   width: 100%;
   top: 40%;
-  left: 16%;
+  left: 17.3%;
+  // text-align: center;
+  // margin: 0 auto;
+  // left: 0;
+  // right: 0;
   margin-top: -50px;
 }
 
@@ -115,11 +120,11 @@ body {
 
 .typed {
   display: inline;
-  font-size: 2.3em;
+  font-size: 2.45vw;
 }
 
 .typed-cursor{
-  font-size: 2.3em;
+  font-size: 2.45vw;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -145,7 +150,7 @@ body {
   position: absolute;
   background: rgba(50,50,50,0);
   width: 70%;
-  padding: 15px 21px;
+  padding: 15px 1.6vw;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -164,30 +169,37 @@ body {
     color: #222; 
     font-weight: 700;
     display: inline-block;
+    font-size: 1.1vw;
 
     &.first-header {
       margin-top: 0;
     }
 
-    &#personal {
-      margin-bottom: 15px;
-    }
+    // &#personal {
+    //   margin-bottom: 5px;
+    // }
   }
 
   h6 {
     margin: 5px 0;
     margin-bottom: 10px;
     color: #222;
+    font-size: 0.9vw;
 
     &.personal {
-      margin-top: 20px;
+      margin-top: 30px;
       margin-bottom: 5px;
       display: inline-block;
+      font-weight: 400;
+    
+      &.first {
+        margin-top: 0;
+      }
     }
   }
 
   p {
-    font-size: 0.8em;
+    font-size: 0.9vw;
     letter-spacing: 0.5px;
     color: #555;
 
@@ -201,7 +213,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 760px;
+    max-width: 60%;
   }
 
   /* Remove the padding we set earlier */

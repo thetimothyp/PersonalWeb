@@ -110,7 +110,7 @@ var info = {
 		Tools used include <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong>.</p> \
 		\
 		<h5 id='personal'>Personal Projects</h5><br> \
-		<h6 class='personal'>Writeboard</h6> \
+		<h6 class='personal first'>Writeboard</h6> \
 		<a target='_blank' href='http://writeboard-app.herokuapp.com/'><img src='images/link.svg'></a> \
 		<p>A simple real time chatting and drawing web application. Users can draw on a communal \
 		whiteboard and chat in real time within their current channel. Written in <strong>HTML, CSS, \
