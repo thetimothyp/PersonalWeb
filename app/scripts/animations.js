@@ -1,4 +1,6 @@
 $(function(){
+	var active;
+
 	$(".typed").typed({
     	stringsElement: $("#typed-strings"),
     	typeSpeed: 10,
@@ -32,12 +34,20 @@ $(function(){
 			$(this).children("hr").removeClass('active');
 		});
 		$(this).children("hr").addClass('active');
+		active = $(this).index();
 		$('.nav-item hr').each(function(i) {
 			if (!$(this).hasClass('active')) {
-				$(this).css({
-					'width':'0',
-					'float':'right'
-				});
+				if (active > $(this).parent().index()) {
+					$(this).css({
+						'width':'0',
+						'float':'right'
+					});
+				} else {
+					$(this).css({
+						'width':'0',
+						'float':'left'
+					});
+				}
 			}
 		})
 	})
@@ -51,11 +61,11 @@ $(function(){
 	$("#experience").on('click', function(e) {
 		$('.info').fadeOut(300, function() {
 			$('.info').html(info.experience);
-			$('img').mouseenter(function(e) {
+			$('.info img').mouseenter(function(e) {
 				$(this).attr('src', 'images/link_hover.svg');
 			})
 
-			$('img').mouseleave(function(e) {
+			$('.info img').mouseleave(function(e) {
 				$(this).attr('src', 'images/link.svg');
 			})
 		}).fadeIn(300);
@@ -67,7 +77,6 @@ $(function(){
 		}).fadeIn(300, function() {
 			$('.skills h5').each(function(i) {
 				var skill = $(this).text().replace(/[.\s]+/g, "");
-				// $('.rating-fill').css('width', skills.skill);
 				$('.rating-fill')[i].style.width = skills[skill];
 			})
 		});
@@ -95,12 +104,15 @@ function fadeIn(i, elements, duration, callback){
 }
 
 var info = {
-	about : "<p>Offering creative design solutions to solve business problems is what \
-		I do best. I write in JavaScript, CSS, Java, and PHP. I also speak to databases and \
-		make servers do stuff. I like working on scalability, performance, reusability, and \
-		great user experiences. <br><br>As a designer and a developer, I write code that \
-		conforms to industry standards and semantic best practices. I am able to transform \
-		static artwork into pixel prefect, interactive and fully functional interfaces.</p>",
+	about : "<p>Hello there! I'm Tim Park, a designer and developer currently living \
+		and working in Orange County, CA. Finishing a B.S in Computer Science at UC Irvine \
+		this December 2016, I already have a fair bit of experience; my past positions include \
+		in-house marketing designer for the UC Irvine Student Affairs Office, iBASEt, Givology, and \
+		most recently, developer for Super Toy Box.<br><br>I have a passion for clean designs and \
+		readable code, using the classic trifecta of HTML, CSS, and JavaScript to write out front ends \
+		and hooking them up to databases and server logic with MongoDB and Node.js. As both designer and \
+		developer, I construct seemless marriages between design and implementation.<br><br>Interested \
+		working together? <a href='mailto:thetimothyp@gmail.com' id='contact-body'><strong>Feel free to reach out!</strong></a></p>",
 
 	experience : 
 		"<h5 class='first-header'>Super Toy Box</h5> \

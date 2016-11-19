@@ -12,11 +12,16 @@ $icon-font-path: '../fonts/';
 }
 
 /* Space out content a bit */
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: 'Open Sans';
   font-weight: 300;
   color: #777;
   background: #fff;
+  min-height: 100%;
 }
 
 .highlight {
@@ -25,9 +30,8 @@ body {
 }
 
 .container {
-  height: 101vh;
+  min-height: 101vh;
   position: relative;
-  overflow: hidden;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -214,8 +218,17 @@ body {
     }
   }
 
+  #contact-body {
+    color: #1eacff;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration-color: #1eacff;
+    }
+  }
+
   a.email {
-    font-size: 2.3vw;
+    font-size: 2.2vw;
     font-weight: 300;
     color: black;
     display: inline-block;
