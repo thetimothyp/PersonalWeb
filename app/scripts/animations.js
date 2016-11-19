@@ -178,7 +178,7 @@ var info = {
 		</div>",
 
 	contact : "<h5 class='first-header email'>GET IN TOUCH</h5> \
-		<a href='mailto:thetimothyp@gmail.com' class='email'>thetimothyp@gmail.com</a> \
+		<a href='mailto:thetimothyp@gmail.com' class='email'>thetimothyp@gmail.com</a><br><br> \
 		<h5 class='email'>FROM THE SOURCE</h5> \
 		<a href='https://github.com/timothsp' target='_blank' class='email'>https://github.com/timothsp</a>"
 }
