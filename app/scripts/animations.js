@@ -61,6 +61,18 @@ $(function(){
 		}).fadeIn(300);
 	})
 
+	$("#skillset").on('click', function(e) {		
+        $('.info').fadeOut(300, function() {
+			$('.info').html(info.skillset);
+		}).fadeIn(300, function() {
+			$('.skills h5').each(function(i) {
+				var skill = $(this).text().replace(/[.\s]+/g, "");
+				// $('.rating-fill').css('width', skills.skill);
+				$('.rating-fill')[i].style.width = skills[skill];
+			})
+		});
+	})
+
 	$("#contact").on('click', function(e) {		
         $('.info').fadeOut(300, function() {
 			$('.info').html(info.contact);
@@ -69,7 +81,7 @@ $(function(){
 });
 
 function invokeFade() {
-	fadeIn(0, $('a'), 600);
+	fadeIn(0, $('a'), 400);
 }
 
 function fadeIn(i, elements, duration, callback){
@@ -128,5 +140,42 @@ var info = {
 		<p>An experiment in movement, fluidity, and 2D physics. User controls a dot with a tail. Not much to \
 		it. (Written in vanilla <strong>JavaScript</strong>, rendered with <strong>HTML5</strong> canvas.)</p>",
 
-	contact : "<p>contact me.</p>"
+	skillset : "<div class='skills'> \
+			<h5 class='first-header'>HTML</h5> \
+			<h5>CSS</h5> \
+			<h5>JAVASCRIPT</h5> \
+			<h5>MONGODB</h5> \
+			<h5>NODE.JS</h5> \
+			<h5>ADOBE CREATIVE SUITE</h5> \
+		</div> \
+		<div class='skill-bar'> \
+			<div class='rating'></div> \
+			<div class='rating'></div> \
+			<div class='rating'></div> \
+			<div class='rating'></div> \
+			<div class='rating'></div> \
+			<div class='rating'></div> \
+		</div> \
+		<div class='skill-bar'> \
+			<div class='rating-fill' id='HTML'></div> \
+			<div class='rating-fill' id='CSS'></div> \
+			<div class='rating-fill' id='JAVASCRIPT'></div> \
+			<div class='rating-fill' id='MONGODB'></div> \
+			<div class='rating-fill' id='NODEJS'></div> \
+			<div class='rating-fill' id='ADOBECREATIVESUITE'></div> \
+		</div>",
+
+	contact : "<h5 class='first-header email'>GET IN TOUCH</h5> \
+		<a href='mailto:thetimothyp@gmail.com' class='email'>thetimothyp@gmail.com</a> \
+		<h5 class='email'>FROM THE SOURCE</h5> \
+		<a href='https://github.com/timothsp' target='_blank' class='email'>https://github.com/timothsp</a>"
+}
+
+var skills = {
+	HTML : "90%",
+	CSS : "90%",
+	JAVASCRIPT : "90%",
+	MONGODB : "70%",
+	NODEJS : "80%",
+	ADOBECREATIVESUITE : "80%"
 }

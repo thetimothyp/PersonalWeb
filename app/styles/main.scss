@@ -150,8 +150,9 @@ body {
   position: absolute;
   background: rgba(50,50,50,0);
   width: 70%;
-  padding: 15px 1.6vw;
+  padding: 2.5vh 1.6vw;
   margin: 0 auto;
+  margin-bottom: 20vh;
   left: 0;
   right: 0;
   top: 55%;
@@ -178,6 +179,10 @@ body {
     // &#personal {
     //   margin-bottom: 5px;
     // }
+
+    &.email {
+      display: block;
+    }
   }
 
   h6 {
@@ -187,7 +192,7 @@ body {
     font-size: 0.9vw;
 
     &.personal {
-      margin-top: 30px;
+      margin-top: 25px;
       margin-bottom: 5px;
       display: inline-block;
       font-weight: 400;
@@ -205,7 +210,68 @@ body {
 
     strong {
       font-weight: 400;
-      color: blue;
+      color: #1eacff;
+    }
+  }
+
+  a.email {
+    font-size: 2.5vw;
+    font-weight: 300;
+    color: black;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    transition: color 0.8s, border-bottom 0.8s;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: #1eacff;
+      border-bottom: 1px solid #1eacff;
+    }
+
+    &:active, &:visited {
+      text-decoration: none;
+    }
+  }
+
+  .skills {
+    position: absolute;
+    right: 100%;
+    margin-top: 2vh;
+    width: 100%;
+    margin-bottom: 20vh;
+
+    h5 {
+      display: block;
+      font-weight: 400;
+      line-height: 0;
+      margin-bottom: 6.5vh;
+      text-align: right;
+    }
+  }
+
+  .skill-bar {
+    position: absolute;
+    padding: 0 1.6vw;
+    left: 0;
+    right: 0;
+    top: 2vh;
+    margin-top: 2vh;
+    bottom: 0;
+
+    .rating {
+      margin-bottom: 5.5vh;
+      background: #eee;
+      width: 100%;
+      height: 1vh;
+    }
+
+    .rating-fill {
+      margin-bottom: 5.5vh;
+      background: #1eacff;
+      width: 0;
+      height: 1vh;
+      transition: width 1.6s;
     }
   }
 }
